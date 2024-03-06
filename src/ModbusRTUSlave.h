@@ -26,7 +26,7 @@ class ModbusRTUSlave {
     #ifdef ESP32
     void begin(uint8_t id, unsigned long baud, uint32_t config = SERIAL_8N1, int8_t rxPin = -1, int8_t txPin = -1, bool invert = false);
     #else
-    void begin(uint8_t id, unsigned long baud, uint32_t config = SERIAL_8N1);
+    void begin(uint8_t id, unsigned long baud, SerialConfig config = SERIAL_8N1);
     #endif
     void poll();
     
