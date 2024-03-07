@@ -90,7 +90,7 @@ void ModbusRTUSlave::begin(uint8_t id, unsigned long baud, uint32_t config, int8
   _clearRxBuffer();
 }
 #else
-void ModbusRTUSlave::begin(uint8_t id, unsigned long baud, uint32_t config) {
+void ModbusRTUSlave::begin(uint8_t id, unsigned long baud, SerialConfig config) {
   if (id >= 1 && id <= 247) _id = id;
   else _id = NO_ID;
   if (_hardwareSerial) {
