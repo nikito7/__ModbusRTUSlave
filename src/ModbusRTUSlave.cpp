@@ -317,7 +317,7 @@ void ModbusRTUSlave::_clearRxBuffer() {
 
 
 
-void ModbusRTUSlave::_calculateTimeouts(unsigned long baud, uint32_t config) {
+void ModbusRTUSlave::_calculateTimeouts(unsigned long baud, SerialConfig config) {
   unsigned long bitsPerChar;
   if (config == SERIAL_8E2 || config == SERIAL_8O2) bitsPerChar = 12;
   else if (config == SERIAL_8N2 || config == SERIAL_8E1 || config == SERIAL_8O1) bitsPerChar = 11;
